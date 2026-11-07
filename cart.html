@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart | Jumia Clone</title>
+    <link rel="stylesheet" href="cart.css" />
+    <link rel="stylesheet" href="styles.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+ <header>
+      <section class="top">
+        <nav class="logo">
+          <a href="/"
+            >JUMIA<svg
+              xmlns="http://www.w3.org/2000/svg"
+              enable-background="new 0 0 40 40"
+              viewBox="0 0 40 40"
+              id="jumia"
+            >
+              <switch fill="#000000">
+                <g>
+                  <path
+                    fill="#f90"
+                    d="M36,20c0,8.8-7.2,16-16,16S4,28.8,4,20S11.2,4,20,4S36,11.2,36,20z M13.3,30.3l6.7-4.9l6.7,4.9    c0.2,0.1,0.4,0.1,0.6,0c0.2-0.1,0.2-0.4,0.2-0.6l-2.6-7.9l6.7-4.9c0.2-0.1,0.2-0.4,0.2-0.6c-0.1-0.2-0.3-0.3-0.5-0.3h-8.3    l-2.6-7.9c-0.1-0.5-0.8-0.5-1,0L16.9,16H8.6c-0.2,0-0.4,0.1-0.5,0.3c-0.1,0.2,0,0.4,0.2,0.6l6.7,4.9l-2.6,7.9    c-0.1,0.2,0,0.4,0.2,0.6c0.1,0.1,0.2,0.1,0.3,0.1S13.2,30.3,13.3,30.3z"
+                  ></path>
+                </g>
+              </switch>
+            </svg>
+          </a>
+        </nav>
+        <form class="search-form">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            type="search"
+            placeholder="Search for products, brands and categories"
+            aria-label="Search Products"
+          />
+          <button type="submit" aria-label="Search">Search</button>
+        </form>
+    
+        <div class="account">
+          <a href="#" class="account-button" aria-expanded="false">
+            <span class="account-icon" aria-hidden="true">♙</span>
+            <span class="account-label">Account</span>
+            <span class="account-arrow" aria-hidden="true">⌄</span>
+          </a>
+
+          <div class="account-dropdown">
+           
+<div class="account-welcome" data-auth="signed-in" hidden>
+  <span class="account-welcome-label">Welcome back,</span>
+  <strong class="account-user-name"></strong>
+</div>
+
+<ul>
+  <li class="sign-in-link" data-auth="signed-out">
+    <a href="./login.html">Sign In</a>
+  </li>
+
+  <li class="my-account-link" data-auth="signed-out">
+    <a href="#">My Account</a>
+  </li>
+
+  <li class="orders-link" data-auth="signed-out">
+    <a href="#">Orders</a>
+  </li>
+
+  <li class="wishlist-link" data-auth="signed-out">
+    <a href="#">Wishlist</a>
+  </li>
+
+  <li class="my-account-link" data-auth="signed-in" hidden>
+    <a href="#">♙ <span>My Account</span></a>
+  </li>
+
+  <li class="orders-link" data-auth="signed-in" hidden>
+    <a href="#">▣ <span>Orders</span></a>
+  </li>
+
+  <li class="inbox-link" data-auth="signed-in" hidden>
+    <a href="#">✉ <span>Inbox</span></a>
+  </li>
+
+  <li class="wishlist-link" data-auth="signed-in" hidden>
+    <a href="#">♡ <span>Wishlist</span></a>
+  </li>
+
+  <li class="voucher-link" data-auth="signed-in" hidden>
+    <a href="#">♧ <span>Voucher</span></a>
+  </li>
+
+  <li class="account-logout" data-auth="signed-in" hidden>
+    <a href="#" id="sign-out-button">Logout</a>
+  </li>
+</ul>
+</div>
+
+        </div>
+
+        <form id="help-form">
+          <a href="#" class="help-button" aria-expanded="false">Help<span class="help-arrow" aria-hidden="true">⌄</span>
+            </a>
+          <ul class="help-dropdown">
+            <li class="help-center-link"><a href="">Help Center</a></li>
+            <li class="place-order-link"><a href="">Place an order</a></li>
+            <li class="payment-options-link"><a href="">Payment Options</a></li>
+            <li class="track-order-link"><a href="">Track an Order</a></li>
+            <li class="cancel-order-link"><a href="">Cancel an Order</a></li>
+            <li class="returns-refunds-link">
+              <a href="">Returns & Refunds</a>
+            </li>
+            <li class="cookie-preferences-link">
+              <a href="">Cookie Preferences</a>
+            </li>
+
+            <li class="live-chat-link"><button>Live Chat</button></li>
+            <li class="whatsapp-link"><button> <a
+    href="https://wa.me/2348089110789"
+    target="_blank"
+    rel="noopener noreferrer"
+  >WhatsApp</button></li>
+          </ul>
+        </form>
+
+       <a href="cart.html" class="cart-button">
+  <i class="fa-solid fa-cart-shopping"></i>
+  Cart
+  <span class="cart-count" id="cart-count">0</span>
+</a>
+      </section>
+
+    <main class="cart-page">
+      <section class="cart-items-panel">
+        <h1 id="cart-heading">Cart (0)</h1>
+        <div id="cart-items"></div>
+      </section>
+
+      <aside class="cart-summary">
+        <h2>CART SUMMARY</h2>
+
+        <div class="cart-subtotal-row">
+          <span>Subtotal</span>
+          <strong id="cart-subtotal">₦0</strong>
+        </div>
+
+        <button type="button" class="cart-checkout" id="cart-checkout">
+          Checkout (₦0)
+        </button>
+      </aside>
+
+      <section class="recently-viewed">
+        <div class="recently-viewed-heading">
+          <h2>Recently Viewed</h2>
+          <a href="index.html"
+            >See All <i class="fa-solid fa-chevron-right"></i
+          ></a>
+        </div>
+
+        <div class="recently-viewed-products" id="recently-viewed-products">
+          <!-- We'll connect your actual product cards here. -->
+        </div>
+      </section>
+    </main>
+   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="./supabase.js"></script>
+<script src="./auth.js"></script>
+<script src="./cart.js"></script>
+<script src="./cart-page.js"></script>
+<script src="./script.js"></script>
+  </body>
+</html>

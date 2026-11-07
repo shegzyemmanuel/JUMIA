@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In | Jumia</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="auth-header">
+      <a href="./index.html" class="jumia-logo">Jumia</a>
+      <a href="./register.html" class="header-link">Create Account</a>
+    </header>
+    <main class="auth-container">
+      <section class="auth-card">
+        <div class="auth-heading">
+          <h1>Welcome back!</h1>
+          <p>Sign in to continue shopping with us.</p>
+        </div>
+
+        <form id="login-form">
+          <div class="form-group">
+            <label for="login-email">Email address</label>
+            <input
+              type="email"
+              id="login-email"
+              name="email"
+              placeholder="Enter your email address"
+              autocomplete="email"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input
+              type="password"
+              id="login-password"
+              name="password"
+              placeholder="Enter your password"
+              autocomplete="current-password"
+              required
+            />
+          </div>
+
+          <p
+            id="login-message"
+            class="auth-message"
+            role="status"
+            aria-live="polite"
+          ></p>
+
+          <button type="submit" class="auth-button">Sign In</button>
+        </form>
+
+        <p class="auth-switch">
+          New to Jumia?
+          <a href="./register.html">Create an account</a>
+        </p>
+      </section>
+
+      <p class="auth-footer">Welcome back to your shopping experience.</p>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="./supabase.js"></script>
+    <script src="./auth.js"></script>
+  </body>
+</html>

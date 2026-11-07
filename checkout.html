@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Checkout | Jumia</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./checkout.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="checkout-header">
+      <a class="checkout-logo" href="./index.html">
+        JUMIA <i class="fa-solid fa-star"></i>
+      </a>
+
+      <a class="checkout-cart-link" href="./cart.html">
+        <i class="fa-solid fa-arrow-left"></i>
+        Back to Cart
+      </a>
+    </header>
+
+    <main class="checkout-page">
+      <h1>Checkout</h1>
+      <p class="checkout-intro">
+        Confirm your delivery details and review your order.
+      </p>
+
+      <div id="checkout-message" role="status" aria-live="polite"></div>
+
+      <div class="checkout-layout">
+        <section class="checkout-panel">
+          <h2><i class="fa-solid fa-location-dot"></i> Delivery Information</h2>
+
+          <form id="checkout-form">
+            <label for="full-name">Full Name</label>
+            <input
+              id="full-name"
+              name="fullName"
+              type="text"
+              autocomplete="name"
+              required
+              maxlength="100"
+            />
+
+            <label for="phone">Phone Number</label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              autocomplete="tel"
+              required
+              maxlength="20"
+              placeholder="e.g. 08012345678"
+            />
+
+            <label for="address">Delivery Address</label>
+            <textarea
+              id="address"
+              name="address"
+              autocomplete="street-address"
+              required
+              maxlength="500"
+              rows="3"
+              placeholder="House number, street and area"
+            ></textarea>
+
+            <label for="city">City / Town</label>
+            <input
+              id="city"
+              name="city"
+              type="text"
+              autocomplete="address-level2"
+              required
+              maxlength="100"
+            />
+
+            <label for="state">Delivery Location</label>
+            <select id="state" name="state" required>
+              <option value="">Select your delivery location</option>
+              <option value="Lagos">Lagos</option>
+              <option value="Ogun">Ogun</option>
+              <option value="Oyo">Oyo</option>
+              <option value="Abuja (FCT)">Abuja (FCT)</option>
+            </select>
+
+            <p class="checkout-note">
+              ...
+            </p>
+
+            <button type="submit" id="continue-payment">
+              Continue to Payment
+            </button>
+          </form>
+        </section>
+
+        <aside class="checkout-panel order-summary">
+          <h2><i class="fa-solid fa-receipt"></i> Order Summary</h2>
+
+          <div id="checkout-items"></div>
+
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <strong id="checkout-subtotal">₦0</strong>
+          </div>
+
+          <div class="summary-row">
+            <span>Delivery Fee</span>
+            <strong id="checkout-delivery">To be calculated</strong>
+          </div>
+
+          <div class="summary-row summary-total">
+            <span>Order Total</span>
+            <strong id="checkout-total">₦0</strong>
+          </div>
+
+          <p class="checkout-note">
+            The final total will include the applicable delivery fee.
+          </p>
+        </aside>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="./supabase.js"></script>
+    <script src="./cart.js"></script>
+    <script src="./checkout.js"></script>
+  </body>
+</html>

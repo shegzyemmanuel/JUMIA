@@ -1,0 +1,1197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+   
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <section class="top">
+        <nav class="logo">
+          <a href="/"
+            >JUMIA<svg
+              xmlns="http://www.w3.org/2000/svg"
+              enable-background="new 0 0 40 40"
+              viewBox="0 0 40 40"
+              id="jumia"
+            >
+              <switch fill="#000000">
+                <g>
+                  <path
+                    fill="#f90"
+                    d="M36,20c0,8.8-7.2,16-16,16S4,28.8,4,20S11.2,4,20,4S36,11.2,36,20z M13.3,30.3l6.7-4.9l6.7,4.9    c0.2,0.1,0.4,0.1,0.6,0c0.2-0.1,0.2-0.4,0.2-0.6l-2.6-7.9l6.7-4.9c0.2-0.1,0.2-0.4,0.2-0.6c-0.1-0.2-0.3-0.3-0.5-0.3h-8.3    l-2.6-7.9c-0.1-0.5-0.8-0.5-1,0L16.9,16H8.6c-0.2,0-0.4,0.1-0.5,0.3c-0.1,0.2,0,0.4,0.2,0.6l6.7,4.9l-2.6,7.9    c-0.1,0.2,0,0.4,0.2,0.6c0.1,0.1,0.2,0.1,0.3,0.1S13.2,30.3,13.3,30.3z"
+                  ></path>
+                </g>
+              </switch>
+            </svg>
+          </a>
+        </nav>
+        <form class="search-form" id="product-search-form">
+  <i class="fa-solid fa-magnifying-glass"></i>
+
+  <input
+    type="search"
+    id="product-search-input"
+    placeholder="Search for products, brands and categories"
+    aria-label="Search Products"
+  />
+
+  <button type="submit" aria-label="Search">Search</button>
+</form>
+        <div class="account">
+          <a href="#" class="account-button" aria-expanded="false">
+            <span class="account-icon" aria-hidden="true">♙</span>
+            <span class="account-label">Account</span>
+            <span class="account-arrow" aria-hidden="true">⌄</span>
+          </a>
+
+          <div class="account-dropdown">
+            <div class="account-welcome" data-auth="signed-in" hidden>
+              <span class="account-welcome-label">Welcome back,</span>
+              <strong class="account-user-name"></strong>
+            </div>
+
+            <ul>
+
+                <li class="sign-in-link" data-auth="signed-out"><a href="./login.html">Sign In</a></li>
+              <hr />
+              <li class="my-account-link" data-auth="signed-out"><a href="#">My Account</a></li>
+              <li class="orders-link" data-auth="signed-out"><a href="#">Orders</a></li>
+              <li class="wishlist-link" data-auth="signed-out"><a href="#">Wishlist</a></li>
+            </ul>
+
+              <li class="my-account-link" data-auth="signed-in" hidden>
+                <a href="#" data-account-placeholder="My Account"
+                  >♙ <span>My Account</span></a
+                >
+              </li>
+
+              <li class="orders-link" data-auth="signed-in" hidden>
+                <a href="#" data-account-placeholder="Orders"
+                  >▣ <span>Orders</span></a
+                >
+              </li>
+
+              <li class="inbox-link" data-auth="signed-in" hidden>
+                <a href="#" data-account-placeholder="Inbox"
+                  >✉ <span>Inbox</span></a
+                >
+              </li>
+
+              <li class="wishlist-link" data-auth="signed-in" hidden>
+                <a href="#" data-account-placeholder="Wishlist"
+                  >♡ <span>Wishlist</span></a
+                >
+              </li>
+
+              <li class="voucher-link" data-auth="signed-in" hidden>
+                <a href="#" data-account-placeholder="Voucher"
+                  >♧ <span>Voucher</span></a
+                >
+              </li>
+
+              <li class="account-logout" data-auth="signed-in" hidden>
+                <a href="#" id="sign-out-button">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <form id="help-form">
+          <a href="#" class="help-button" aria-expanded="false">Help<span class="help-arrow" aria-hidden="true">⌄</span>
+            </a>
+          <ul class="help-dropdown">
+            <li class="help-center-link"><a href="">Help Center</a></li>
+            <li class="place-order-link"><a href="">Place an order</a></li>
+            <li class="payment-options-link"><a href="">Payment Options</a></li>
+            <li class="track-order-link"><a href="">Track an Order</a></li>
+            <li class="cancel-order-link"><a href="">Cancel an Order</a></li>
+            <li class="returns-refunds-link">
+              <a href="">Returns & Refunds</a>
+            </li>
+            <li class="cookie-preferences-link">
+              <a href="">Cookie Preferences</a>
+            </li>
+
+            <li class="live-chat-link"><button>Live Chat</button></li>
+            <li class="whatsapp-link"><button> <a
+    href="https://wa.me/2348089110789"
+    target="_blank"
+    rel="noopener noreferrer"
+  >WhatsApp</button></li>
+          </ul>
+        </form>
+
+       <a href="cart.html" class="cart-button">
+  <i class="fa-solid fa-cart-shopping"></i>
+  Cart
+  <span class="cart-count" id="cart-count">0</span>
+</a>
+      </section>
+      <article class="categories">
+        <nav class="category"><a href="">Official Store</a></nav>
+        <nav class="category">
+          <a href="">Appliances</a>
+          <section class="dropdown">
+            <ul>
+              <li class="small-appliances">
+                <a href=""><h3>SMALL APPLIANCES</h3></a>
+              </li>
+              <li><a href="">Blenders</a></li>
+              <li><a href="">Deep Fryers</a></li>
+              <li><a href="">Juicers</a></li>
+              <li><a href="">Air Fryers</a></li>
+              <li><a href="">Rice Cookers</a></li>
+              <li><a href="">Toasters & Ovens</a></li>
+              <li><a href="">Microwaves</a></li>
+              <li><a href="">Bundles</a></li>
+              <li><a href="">Vacuum Cleaners</a></li>
+              <li><a href="">Kettles</a></li>
+              <li><a href="">Yam Pounders</a></li>
+              <li><a href="">Irons</a></li>
+              <li><a href="">Electric Cookware</a></li>
+              <li><a href="">Electric Drink Mixers</a></li>
+              <li><a href="">Food Processors</a></li>
+              <li><a href="">Coffee Makers</a></li>
+              <li><a href="">Electric Pressure Cookers</a></li>
+            </ul>
+            <ul>
+              <li class="large-appliances">
+                <a href=""><h3>LARGE APPLIANCES</h3></a>
+              </li>
+              <li><a href="">Washing Machines</a></li>
+              <li><a href="">Fridges</a></li>
+              <li><a href="">Freezers</a></li>
+              <li><a href="">Air Conditioners</a></li>
+              <li><a href="">Heaters</a></li>
+              <li><a href="">Fans</a></li>
+              <li><a href="">Air Purifiers</a></li>
+              <li><a href="">Water Dispensers</a></li>
+              <li><a href="">Generators & Inverters</a></li>
+            </ul>
+          </section>
+        </nav>
+
+        <nav class="category">
+          <a href="">Phones & Tablets</a>
+          <section class="dropdown">
+            <ul>
+              <li class="mobile-phones">
+                <a href=""><h3>MOBILE PHONES</h3></a>
+              </li>
+              <li><a href="">Smartphones</a></li>
+              <li><a href="">Android Phones</a></li>
+              <li><a href="">iphones</a></li>
+              <li><a href="">Basic Phones</a></li>
+              <li><a href="">Refurbished Phones</a></li>
+              <li><a href="">Rugged Phones</a></li>
+              <li><a href="">Cordless Telephones</a></li>
+              <li><a href="">Dual Sim Phones</a></li>
+            </ul>
+            <ul>
+              <li class="tablets">
+                <a href=""><h3>TABLETS</h3></a>
+              </li>
+              <li><a href="">iPads</a></li>
+              <li><a href="">Android Tablets</a></li>
+              <li><a href="">Educational Tablets</a></li>
+              <li><a href="">Tablet Accessories</a></li>
+              <li><a href="">Amazon Fire Tablets</a></li>
+              <li><a href="">Microsoft Tablets</a></li>
+            </ul>
+            <ul>
+              <li class="mobile-accessories">
+                <a href=""><h3>MOBILE ACCESSORIES</h3></a>
+              </li>
+              <li><a href="">Accessory Kits</a></li>
+              <li><a href="">Adapters</a></li>
+              <li><a href="">Batteries</a></li>
+              <li><a href="">Battery Chargers</a></li>
+              <li><a href="">Bluetooth Headsets</a></li>
+              <li><a href="">Cables</a></li>
+              <li><a href="">Car Accessories</a></li>
+              <li><a href="">Chargers</a></li>
+              <li><a href="">Earphones & Headsets</a></li>
+              <li><a href="">MicroSD Cards</a></li>
+              <li><a href="">Screen Protectors</a></li>
+              <li><a href="">Selfie Sticks & Tripods</a></li>
+              <li><a href="">Smart Watches</a></li>
+              <li><a href="">Power Banks</a></li>
+              <li><a href="">Phone Camera Lenses</a></li>
+            </ul>
+            <ul>
+              <li class="top-smartphones">
+                <a href=""><h3>TOP SMARTPHONES</h3></a>
+              </li>
+              <li><a href="">iPhone 17</a></li>
+              <li><a href="">Samsung Galaxy S24 & S24 Ultra</a></li>
+              <li><a href="">Tecno Spark 20 & 20 Pro</a></li>
+              <li><a href="">Itel S23 & S23 Plus</a></li>
+              <li><a href="">Infinix Smart 8</a></li>
+              <li><a href="">Xiaomi Redmi 13c</a></li>
+              <li><a href="">Infinix Hot 40i</a></li>
+              <li><a href="">Tecno Pop 8</a></li>
+              <li><a href="">Itel A70</a></li>
+            </ul>
+            <ul>
+              <li class="top-phone-brands">
+                <a href=""><h3>TOP PHONE BRANDS</h3></a>
+              </li>
+              <li><a href="">Samsung</a></li>
+              <li><a href="">Apple</a></li>
+              <li><a href="">Xiaomi</a></li>
+              <li><a href="">Itel</a></li>
+              <li><a href="">Tecno</a></li>
+            </ul>
+          </section>
+        </nav>
+
+        <nav class="category">
+          <a href="">Health & Beauty</a>
+          <section class="dropdown">
+            <ul>
+              <li class="make-up">
+                <a href=""><h3>MAKE UP</h3></a>
+              </li>
+              <li><a href="">Concealers & Color Correctors</a></li>
+              <li><a href="">Foundation</a></li>
+              <li><a href="">Powder</a></li>
+              <li><a href="">Lipstick</a></li>
+              <li><a href="">Eyeliner & Kajal</a></li>
+              <li><a href="">Mascara</a></li>
+            </ul>
+            <ul>
+              <li class="personal-care">
+                <a href=""><h3>PERSONAL CARE</h3></a>
+              </li>
+              <li><a href="">Skin Care</a></li>
+              <li><a href="">Sunscreens & Tanning Products</a></li>
+              <li><a href="">Contraceptives and Lubricants</a></li>
+              <li><a href="">Piercing & Tattoo Supplies</a></li>
+              <li><a href="">Deodorants & Antiperspirants</a></li>
+              <li><a href="">Lip Care</a></li>
+            </ul>
+            <ul>
+              <li class="fragrances">
+                <a href=""><h3>FRAGRANCES</h3></a>
+              </li>
+              <li><a href="">Women's </a></li>
+              <li><a href="">Men's</a></li>
+            </ul>
+            <ul>
+              <li class="hair-care">
+                <a href=""><h3>HAIR CARE</h3></a>
+              </li>
+              <li><a href="">Hair Cutting Tools</a></li>
+              <li><a href="">Shampoo & Conditioner</a></li>
+              <li><a href="">Wigs & Accessories</a></li>
+            </ul>
+
+            <ul>
+              <li class="oral-care">
+                <a href=""><h3>ORAL CARE</h3></a>
+              </li>
+              <li><a href="">Teeth Whitening</a></li>
+              <li><a href="">Toothpaste</a></li>
+            </ul>
+            <ul>
+              <li class="vitamins">
+                <a href=""><h3>VITAMINS & DIETARY SUPPLEMENTS</h3></a>
+              </li>
+              <li><a href="">Vitams & Minerals</a></li>
+              <li><a href="">Supplements</a></li>
+              <li><a href="">Multi & Prenatal Vitamins</a></li>
+            </ul>
+          </section>
+        </nav>
+
+        <nav class="category">
+          <a href="">Home & Office</a>
+          <section class="dropdown">
+            <ul>
+              <li class="home-kitchen">
+                <a href=""><h3>HOME AND KITCHEN</h3></a>
+              </li>
+              <li><a href="">Bath</a></li>
+              <li><a href="">Bedding</a></li>
+              <li><a href="">Home Decor</a></li>
+              <li><a href="">Home Furniture</a></li>
+              <li><a href="">Vacuums & Floor Care</a></li>
+              <li><a href="">Wall Art</a></li>
+              <li><a href="">Cookware</a></li>
+              <li><a href="">Bakeware</a></li>
+              <li><a href="">Small Appliances</a></li>
+              <li><a href="">Cutlery & Knife Accessories</a></li>
+            </ul>
+            <ul>
+              <li class="office-products">
+                <a href=""><h3>OFFICE PRODUCTS</h3></a>
+              </li>
+              <li><a href="">Office & School Supplies</a></li>
+              <li><a href="">Office Furniture & Lighting</a></li>
+              <li><a href="">Packaging Materials </a></li>
+            </ul>
+            <ul>
+              <li class="home-office-furniture">
+                <a href=""><h3>HOME & OFFICE FURNITURE</h3></a>
+              </li>
+              <li><a href="">Kitchen & Dining Room Furniture</a></li>
+              <li><a href="">Lighting</a></li>
+              <li><a href="">Stationery</a></li>
+              <li><a href="">Storage & Organization</a></li>
+            </ul>
+            <ul>
+              <li class="outdoor-garden">
+                <a href=""><h3>OUTDOOR & GARDEN</h3></a>
+              </li>
+              <li><a href="">Generator</a></li>
+            </ul>
+          </section>
+        </nav>
+
+        <nav class="category">
+          <a href="">Electronics</a>
+          <section class="dropdown">
+            <ul>
+              <li class="television">
+                <a href=""><h3>TELEVISION & VIDEO</h3></a>
+              </li>
+              <li><a href="">Televisions</a></li>
+              <li><a href="">Smart TVs</a></li>
+              <li><a href="">LED & LCD TVs</a></li>
+              <li><a href="">QLED & OLED TVs</a></li>
+              <li><a href="">Curved TV</a></li>
+              <li><a href="">LG TV</a></li>
+              <li><a href="">Hisense TV</a></li>
+              <li><a href="">Samsung TV</a></li>
+              <li><a href="">Smart TV 32 Inches</a></li>
+              <li><a href="">Smart TV 43 Inches</a></li>
+              <li><a href="">Smart TV 55 Inches</a></li>
+              <li><a href="">TV Accessories</a></li>
+              <li><a href="">DVD Players & Recorders</a></li>
+            </ul>
+            <ul>
+              <li class="cameras-photos">
+                <a href=""><h3>CAMERAS & PHOTOS</h3></a>
+              </li>
+              <li><a href="">Digital Cameras</a></li>
+              <li><a href="">Projectors</a></li>
+              <li><a href="">Video Surveillance</a></li>
+              <li><a href="">CCTV Cameras</a></li>
+              <li><a href="">Compact Cameras</a></li>
+              <li><a href="">SLR Digital Cameras</a></li>
+              <li><a href="">Professional Video Cameras</a></li>
+              <li><a href="">Sport & Action Cameras</a></li>
+              <li><a href="">Instant Cameras</a></li>
+              <li><a href="">Drones with Camera</a></li>
+              <li><a href="">Nikon</a></li>
+            </ul>
+            <ul>
+              <li class="home-audio">
+                <a href=""><h3>HOME AUDIO</h3></a>
+              </li>
+              <li><a href="">Home Theatre Systems</a></li>
+              <li><a href="">Receivers & Amplifiers</a></li>
+              <li><a href="">Sound Bars</a></li>
+              <li><a href="">LG Home Theatre System</a></li>
+              <li><a href="">Hisense Sound Bar</a></li>
+              <li><a href="">Bluetooth Speakers</a></li>
+              <li><a href="">Subwoofers</a></li>
+              <li><a href="">LG</a></li>
+              <li><a href="">JBL</a></li>
+            </ul>
+
+            <ul>
+              <li class="generators">
+                <a href=""><h3>GENERATORS & PORTABLE POWER</h3></a>
+              </li>
+              <li><a href="">Generators</a></li>
+              <li><a href="">Power Inverters</a></li>
+              <li><a href="">Solar & Wind Power</a></li>
+              <li><a href="">Stabilizers</a></li>
+              <li><a href="">Batteries</a></li>
+              <li><a href="">Lithium Battery</a></li>
+              <li><a href="">Battery Charger</a></li>
+            </ul>
+          </section>
+        </nav>
+
+        <nav class="category">
+          <a href="">Fashion</a>
+          <section class="dropdown">
+            <ul>
+              <li class="women">
+                <a href=""><h3>WOMEN'S FASHION</h3></a>
+              </li>
+              <li><a href="">Clothing</a></li>
+              <li><a href="">Shoes</a></li>
+              <li><a href="">Accessories</a></li>
+              <li><a href="">Jewelry</a></li>
+              <li><a href="">Handbags & Wallets</a></li>
+              <li><a href="">Underwear & Sleepwear</a></li>
+              <li><a href="">Maternity</a></li>
+              <li><a href="">Dresses</a></li>
+              <li><a href="">Traditional</a></li>
+              <li><a href="">Beach & Swimwear</a></li>
+              <li><a href="">Flats</a></li>
+              <li><a href="">Women Costumes & Accessories</a></li>
+            </ul>
+            <ul>
+              <li class="kid">
+                <a href=""><h3>KID'S FASHION</h3></a>
+              </li>
+              <li><a href="">Boy's Fashion</a></li>
+              <li><a href="">Girl's Fashion</a></li>
+            </ul>
+            <ul>
+              <li class="men">
+                <a href=""><h3>MEN's FASHION</h3></a>
+              </li>
+              <li><a href="">Clothing</a></li>
+              <li><a href="">Shoes</a></li>
+              <li><a href="">Accessories</a></li>
+              <li><a href="">Underwear & Sleepwear</a></li>
+              <li><a href="">Traditional & Cultural Wear</a></li>
+              <li><a href="">T-Shirts</a></li>
+              <li><a href="">Polo Shirts</a></li>
+              <li><a href="">Trousers & Chinos</a></li>
+              <li><a href="">Sneakers</a></li>
+              <li><a href="">Jewelry</a></li>
+              <li><a href="">Jerseys</a></li>
+            </ul>
+            <ul>
+              <li class="all-fashion">
+                <a href=""><h3>ALL FASHION</h3></a>
+              </li>
+              <li><a href="">Fabrics</a></li>
+              <li><a href="">Luggage & Travel Gear</a></li>
+              <li><a href=""> Multi-Pack</a></li>
+              <li><a href="">Traditional & Cultural Wear</a></li>
+              <li><a href="">Uniforms, Work & Safety</a></li>
+              <li><a href="">Weddings</a></li>
+            </ul>
+            <ul>
+              <li>
+                <a href=""><h3>WATCHES</h3></a>
+              </li>
+              <li><a href="">Men's Watches</a></li>
+              <li><a href="">Women's Watches</a></li>
+            </ul>
+            <ul>
+              <li class="sunglasses">
+                <a href=""><h3>SUNGLASSES</h3></a>
+              </li>
+              <li><a href="">Men's Sunglasses</a></li>
+              <li><a href="">Women's Sunglasses</a></li>
+            </ul>
+            <ul>
+              <li class="top-brands">
+                <a href=""><h3>TOP BRANDS</h3></a>
+              </li>
+              <li><a href="">Adidas</a></li>
+              <li><a href="">DeFacto</a></li>
+              <li><a href="">Nike</a></li>
+            </ul>
+          </section>
+        </nav>
+
+        <nav class="category">
+          <a href="">Supermarket</a>
+          <section class="dropdown">
+            <ul>
+              <li class="food-cupboard">
+                <a href=""><h3>FOOD CUPBOARD</h3></a>
+              </li>
+              <li><a href="">Grains & Rice</a></li>
+              <li><a href="">Pasta & Noodles</a></li>
+              <li><a href="">Herbs, Spices & Seasoning</a></li>
+              <li><a href="">Malt Drinks</a></li>
+              <li><a href="">Coffee</a></li>
+              <li><a href="">Water</a></li>
+              <li><a href="">Cooking Oil</a></li>
+            </ul>
+            <ul>
+              <li class="beverages">
+                <a href=""><h3>BEVERAGES</h3></a>
+              </li>
+              <li><a href="">Soft Drink</a></li>
+              <li><a href="">Milk & Cream</a></li>
+              <li><a href="">Energy Drink</a></li>
+              <li><a href="">Bottled Beverages</a></li>
+              <li><a href="">Juices</a></li>
+            </ul>
+            <ul>
+              <li class="household-care">
+                <a href=""><h3>HOUSEHOLD CARE</h3></a>
+              </li>
+              <li><a href="">Laundry</a></li>
+              <li><a href="">Air Fresheners</a></li>
+              <li><a href="">Toilet Paper & Wipes</a></li>
+              <li><a href="">Bathroom Cleaners</a></li>
+              <li><a href="">Dishwashing</a></li>
+              <li><a href="">Cleaning Tools</a></li>
+            </ul>
+
+            <ul>
+              <li class="beer">
+                <a href=""><h3>BEER, WINE & SPIRITS</h3></a>
+              </li>
+              <li><a href="">Beers</a></li>
+              <li><a href="">Vodka</a></li>
+              <li><a href="">Red Wine</a></li>
+              <li><a href="">Champagne & Sparkling Wine</a></li>
+              <li><a href="">White Wine</a></li>
+              <li><a href="">Whiskey</a></li>
+              <li><a href="">Liquors</a></li>
+            </ul>
+            <ul>
+              <li class="baby">
+                <a href=""><h3>BABY PRODUCTS</h3></a>
+              </li>
+              <li><a href="">Disposable Diapers</a></li>
+              <li><a href="">Bottle Feeding</a></li>
+              <li><a href="">Wipes & Refills</a></li>
+            </ul>
+          </section>
+        </nav>
+
+        <nav class="category">
+          <a href="">Computing</a>
+          <section class="dropdown">
+            <ul>
+              <li class="computers">
+                <a href=""><h3>COMPUTERS</h3></a>
+              </li>
+              <li><a href="">Desktops</a></li>
+              <li><a href="">Laptops</a></li>
+              <li><a href="">Macbooks</a></li>
+              <li><a href="">Gaming Laptops</a></li>
+              <li><a href="">HP Elitebook</a></li>
+              <li><a href="">Dell Latitude</a></li>
+              <li><a href="">Lenovo Thinkpad</a></li>
+              <li><a href="">Asus Zenbook</a></li>
+            </ul>
+            <ul>
+              <li class="data">
+                <a href=""><h3>DATA STORAGE</h3></a>
+              </li>
+              <li><a href="">External Hard Drives</a></li>
+              <li><a href="">USB Flash Drives</a></li>
+              <li><a href="">External Solid State</a></li>
+            </ul>
+
+            <ul>
+              <li class="printers">
+                <a href=""><h3>PRINTERS</h3></a>
+              </li>
+              <li><a href="">Inkjet Printers</a></li>
+              <li><a href="">Laser Printers</a></li>
+              <li><a href="">Printer Ink & Toner</a></li>
+            </ul>
+            <ul>
+              <li>
+                <a href=""><h3>COMPUTER ACCESSORIES</h3></a>
+              </li>
+              <li><a href="">KEYBOARDS & Mice</a></li>
+              <li><a href="">PC Gaming Hardware</a></li>
+              <li><a href="">Uninterrupted Power Supply</a></li>
+              <li><a href="">Memory Cards</a></li>
+              <li><a href="">Batteries</a></li>
+              <li><a href="">Scanners</a></li>
+              <li><a href="">Video Projectors</a></li>
+              <li><a href="">Bluetooth Keyboards</a></li>
+              <li><a href="">Bluetooth Mouse</a></li>
+            </ul>
+            <ul>
+              <li>
+                <a href=""><h3>TOP BRANDS</h3></a>
+              </li>
+              <li><a href="">HP</a></li>
+              <li><a href="">Lenovo</a></li>
+              <li><a href="">Apple</a></li>
+              <li><a href="">ASUS</a></li>
+              <li><a href="">Huawei</a></li>
+              <li><a href="">Microsoft</a></li>
+              <li><a href="">Kingston</a></li>
+              <li><a href="">Seagate</a></li>
+              <li><a href="">Samsung</a></li>
+              <li><a href="">Sandisk</a></li>
+              <li><a href="">Toshiba</a></li>
+            </ul>
+          </section>
+        </nav>
+
+        <nav class="category">
+          <a href="">Baby Products</a>
+          <section class="dropdown">
+            <ul>
+              <li class="apparel">
+                <a href=""><h3>APPAREL & ACCESSORIES</h3></a>
+              </li>
+              <li><a href="">Baby Boys</a></li>
+              <li><a href="">Baby Girls</a></li>
+            </ul>
+            <ul>
+              <li class="diapering">
+                <a href=""><h3>DIAPERING</h3></a>
+              </li>
+              <li><a href="">Disposable Diapers</a></li>
+              <li><a href="">Diaper Bags</a></li>
+              <li><a href="">Wipes & Holders</a></li>
+            </ul>
+            <ul>
+              <li class="baby-toddler">
+                <a href=""><h3>BABY & TODDLER TOYS</h3></a>
+              </li>
+              <li><a href="">Activity Play Centers</a></li>
+              <li><a href="">Music & Sound</a></li>
+              <li><a href="">Bath Toys</a></li>
+            </ul>
+            <ul>
+              <li class="bathing">
+                <a href=""><h3>BATHING & SKINCARE</h3></a>
+              </li>
+              <li><a href="">Washcloths & Towels</a></li>
+              <li><a href="">Grooming & Healthcare Kits</a></li>
+              <li><a href="">Skin Care</a></li>
+              <li><a href="">Bathing Tubs & Seats</a></li>
+              <li><a href="">Bathroom Safety</a></li>
+            </ul>
+            <ul>
+              <li class="feeding">
+                <a href=""><h3>FEEDING</h3></a>
+              </li>
+              <li><a href="">Bibs & Burp Cloths</a></li>
+              <li><a href="">Breastfeeding</a></li>
+              <li><a href="">Bottle-Feeding</a></li>
+              <li><a href="">Pacifiers & Accessories</a></li>
+              <li><a href="">Food Storage</a></li>
+              <li><a href="">Highchairs & Booster Seats</a></li>
+              <li><a href="">Solid Feeding</a></li>
+            </ul>
+            <ul>
+              <li class="gear">
+                <a href=""><h3>GEAR</h3></a>
+              </li>
+              <li><a href=""> Backpactks & Carriers </a></li>
+              <li><a href="">Swings,Jumpers & Bouncers</a></li>
+              <li><a href="">Walkers</a></li>
+            </ul>
+          </section>
+        </nav>
+
+        <nav class="category">
+          <a href="">Gaming</a>
+          <section class="dropdown">
+            <ul>
+              <li class="playstation">
+                <a href=""><h3>PLAYSTATION</h3></a>
+              </li>
+              <li><a href="">Playstation 5</a></li>
+              <li><a href="">Playstation 4</a></li>
+              <li><a href="">Playstation 3</a></li>
+              <li><a href="">Playstation</a></li>
+              <li><a href="">Playstation Vita</a></li>
+            </ul>
+            <ul>
+              <li class="xbox">
+                <a href=""><h3>XBOX</h3></a>
+              </li>
+              <li><a href="">XBOX One</a></li>
+              <li><a href="">XBOX 360</a></li>
+              <li><a href="">XBOX</a></li>
+            </ul>
+            <ul>
+              <li class="nintendo">
+                <a href=""><h3>NINTENDO</h3></a>
+              </li>
+              <li><a href="">Nintendo 3DS</a></li>
+              <li><a href="">Nintendo DS</a></li>
+              <li><a href="">Nintendo Switch</a></li>
+              <li><a href="">Nintendo Wii</a></li>
+            </ul>
+            <ul>
+              <li class="top-games">
+                <a href=""><h3>TOP GAMES</h3></a>
+              </li>
+              <li><a href="">FIFA'23 PS5</a></li>
+              <li><a href="">PES'23 PS4</a></li>
+              <li><a href="">God of war</a></li>
+              <li><a href="">Spiderman</a></li>
+              <li><a href="">Call of Duty</a></li>
+              <li><a href="">Assasin's Creed Valhalla</a></li>
+              <li><a href="">The Last Of Us</a></li>
+              <li><a href="">The Witcher 3</a></li>
+              <li><a href="">Metal Gear Solid</a></li>
+              <li><a href="">Fallout</a></li>
+              <li><a href="">Madden NFL</a></li>
+              <li><a href="">Far Cry</a></li>
+              <li><a href="">Grand Theft Auto</a></li>
+            </ul>
+          </section>
+        </nav>
+
+        <nav class="category">
+          <a href="">Other categories</a>
+          <section class="dropdown">
+            <ul>
+              <li class="music">
+                <a href=""><h3>MUSICAL INSTRUMENTS</h3></a>
+              </li>
+              <li><a href="">Musical Instruments</a></li>
+              <li><a href="">Studio & Live Equipment</a></li>
+              <li><a href="">Electronic Music & DJ Equipment</a></li>
+              <li><a href="">Amplifiers & Effects</a></li>
+            </ul>
+          </section>
+        </nav>
+      </article>
+    </header>
+
+    <!-- JUMIA HOMEPAGE CONTENT -->
+
+    <main class="homepage">
+      <!-- HERO BANNER -->
+
+      <!-- HERO BANNER -->
+      <section class="jumia-hero">
+        <div class="hero-banner">
+          <img
+            src="assets/jumiabanner4.jpg"
+            alt="Jumia promotional banner"
+            class="hero-slide-image"
+          />
+
+          <button
+            type="button"
+            class="hero-arrow hero-prev"
+            aria-label="Previous banner"
+          >
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+
+          <button
+            type="button"
+            class="hero-arrow hero-next"
+            aria-label="Next banner"
+          >
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
+          <!-- Four dots for four banner images -->
+          <div class="hero-dots">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROMOTIONAL CARDS -->
+
+      <section class="promo-section">
+        <div class="promo-track">
+          <a href="#" class="promo-card">
+            <img src="assets/call-to-order.gif" alt="Call to Order" />
+          </a>
+
+          <a href="#" class="promo-card">
+            <img src="assets/makemoney.gif" alt="Make Money" />
+          </a>
+
+          <a href="#" class="promo-card">
+            <img src="assets/freedelivery.png" alt="Free Delivery" />
+          </a>
+
+          <a href="#" class="promo-card">
+            <img src="assets/new-arrival.gif" alt="New Arrival" />
+          </a>
+
+          <a href="#" class="promo-card">
+            <img src="assets/buy2-1.png" alt="Buy 2 Pay for 1" />
+          </a>
+
+          <a href="#" class="promo-card">
+            <img src="assets/Banger-Deals.gif" alt="Banger Deals" />
+          </a>
+
+          <a href="#" class="promo-card">
+            <img src="assets/jumia-delivery.gif" alt="Jumia Special" />
+          </a>
+        </div>
+      </section>
+
+      <!-- YOUR EXISTING FLASH SALES SECTION
+         SHOULD FOLLOW HERE -->
+    </main>
+
+    <!-- FLASH SALES SECTION -->
+    <section class="flash-sales" id="flash-sales">
+      <div class="flash-sales-header">
+        <div class="flash-sales-heading">
+          <h2>Flash Sales</h2>
+
+          <div class="flash-countdown">
+            <i class="fa-regular fa-clock"></i>
+            <span>Time Left:</span>
+            <strong id="flash-timer">00h : 00m : 00s</strong>
+          </div>
+        </div>
+
+        <a href="flash-sales.html" class="flash-see-all">
+          See All
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="flash-products-wrapper">
+        <button
+          type="button"
+          class="flash-nav flash-prev"
+          aria-label="Scroll products left"
+        >
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <div class="flash-products" id="flash-products">
+          <!-- PRODUCT 1 -->
+          <article class="flash-product">
+            <a href="#" class="flash-product-image">
+              <img
+                src="assets/powerbank.jpg"
+                alt="EASYPIE 20000mAh power bank"
+                loading="lazy"
+              />
+              <span class="flash-discount">-51%</span>
+            </a>
+            <div class="flash-stock">20 items in stock</div>
+            <div class="flash-product-info">
+              <h3>
+                <a href="#"
+                  >EASYPIE 20000mAh Ultra Slim Power Bank Fast Charging</a
+                >
+              </h3>
+              <div class="flash-rating">
+                <i class="fa-solid fa-star"></i>
+                <span>3.5</span>
+                <span class="rating-count">(3,521)</span>
+              </div>
+              <p class="flash-current-price">₦7,100</p>
+              <div class="flash-old-price">
+                <del>₦14,400</del>
+              </div>
+
+<button
+  type="button"
+  class="add-to-cart"
+  data-id="easypie-powerbank"
+  data-name="EASYPIE 20000mAh Ultra Slim Power Bank Fast Charging"
+  data-price="7100"
+  data-old-price="14400"
+  data-discount="-51%"
+  data-image="assets/powerbank.jpg"
+>
+  Add to Cart
+</button>
+
+            </div>
+          </article>
+
+          <!-- PRODUCT 2 -->
+          <article class="flash-product">
+            <a href="#" class="flash-product-image">
+              <img
+                src="assets/fan1.jpg"
+                alt="Nexus 16 inch standing fan"
+                loading="lazy"
+              />
+              <span class="flash-discount">-24%</span>
+            </a>
+            <div class="flash-stock">20 items in stock</div>
+            <div class="flash-product-info">
+              <h3>
+                <a href="#"
+                  >Nexus 16 Inches Standing Fan (NXSF 4400B) - Black</a
+                >
+              </h3>
+              <div class="flash-rating">
+                <i class="fa-solid fa-star"></i>
+                <span>3.9</span>
+                <span class="rating-count">(5,315)</span>
+              </div>
+              <p class="flash-current-price">₦23,629</p>
+              <div class="flash-old-price">
+                <del>₦31,075</del>
+              </div>
+              <button
+  type="button"
+  class="add-to-cart"
+  data-id="nexus-standing-fan"
+  data-name="Nexus 16 Inches Standing Fan (NXSF 4400B) - Black"
+  data-price="23629"
+  data-old-price="31075"
+  data-discount="-24%"
+  data-image="assets/fan1.jpg"
+>
+  Add to Cart
+</button>
+            </div>
+          </article>
+
+          <!-- PRODUCT 3 -->
+          <article class="flash-product">
+            <a href="#" class="flash-product-image">
+              <img
+                src="assets/fan1.jpg"
+                alt="Binatone standing fan"
+                loading="lazy"
+              />
+              <span class="flash-discount">-21%</span>
+            </a>
+            <div class="flash-stock">20 items in stock</div>
+            <div class="flash-product-info">
+              <h3>
+                <a href="#">Binatone 16 Inches Standing Fan (A1691)</a>
+              </h3>
+              <div class="flash-rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.3</span>
+                <span class="rating-count">(1,456)</span>
+              </div>
+              <p class="flash-current-price">₦41,655</p>
+              <div class="flash-old-price">
+                <del>₦52,725</del>
+              </div>
+              <button
+  type="button"
+  class="add-to-cart"
+  data-id="binatone-standing-fan"
+  data-name="Binatone 16 Inches Standing Fan (A1691)"
+  data-price="41655"
+  data-old-price="52725"
+  data-discount="-21%"
+  data-image="assets/fan1.jpg"
+>
+  Add to Cart
+</button>
+            </div>
+          </article>
+
+          <!-- PRODUCT 4 -->
+          <article class="flash-product">
+            <a href="#" class="flash-product-image">
+              <img
+                src="assets/gen.jpg"
+                alt="Haier Thermocool generator"
+                loading="lazy"
+              />
+              <span class="flash-discount">-28%</span>
+            </a>
+            <div class="flash-stock">7 items in stock</div>
+            <div class="flash-product-info">
+              <h3>
+                <a href="#">Haier Thermocool 2000W Generator</a>
+              </h3>
+              <div class="flash-rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.8</span>
+                <span class="rating-count">(4)</span>
+              </div>
+              <p class="flash-current-price">₦78,825</p>
+              <div class="flash-old-price">
+                <del>₦109,975</del>
+              </div>
+              <button
+  type="button"
+  class="add-to-cart"
+  data-id="haier-thermocool-generator"
+  data-name="Haier Thermocool 2000W Generator"
+  data-price="78825"
+  data-old-price="109975"
+  data-discount="-28%"
+  data-image="assets/gen.jpg"
+>
+  Add to Cart
+</button>
+            </div>
+          </article>
+
+          <!-- PRODUCT 5 -->
+          <article class="flash-product">
+            <a href="#" class="flash-product-image">
+              <img
+                src="assets/tv.png"
+                alt="Royal 50 inch QLED television"
+                loading="lazy"
+              />
+              <span class="flash-discount">-40%</span>
+            </a>
+            <div class="flash-stock">20 items in stock</div>
+            <div class="flash-product-info">
+              <h3>
+                <a href="#">Royal 50 Inch QLED Google TV</a>
+              </h3>
+              <div class="flash-rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.5</span>
+                <span class="rating-count">(425)</span>
+              </div>
+              <p class="flash-current-price">₦339,499</p>
+              <div class="flash-old-price">
+                <del>₦563,333</del>
+              </div>
+              <button
+  type="button"
+  class="add-to-cart"
+  data-id="royal-50-inch-qled-tv"
+  data-name="Royal 50 Inch QLED Google TV"
+  data-price="339499"
+  data-old-price="563333"
+  data-discount="-40%"
+  data-image="assets/tv.png"
+>
+  Add to Cart
+</button>
+            </div>
+          </article>
+
+          <!-- PRODUCT 6 -->
+          <article class="flash-product">
+            <a href="#" class="flash-product-image">
+              <img
+                src="assets/phonejumia.jpg"
+                alt="POCO C85 smartphone"
+                loading="lazy"
+              />
+              <span class="flash-discount">-7%</span>
+            </a>
+            <div class="flash-stock">20 items in stock</div>
+            <div class="flash-product-info">
+              <h3>
+                <a href="#">POCO C85 6.9 Inch, 6GB RAM, 128GB ROM</a>
+              </h3>
+              <div class="flash-rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.4</span>
+                <span class="rating-count">(157)</span>
+              </div>
+              <p class="flash-current-price">₦172,285</p>
+              <div class="flash-old-price">
+                <del>₦185,000</del>
+              </div>
+              <button
+  type="button"
+  class="add-to-cart"
+  data-id="poco-c85-smartphone"
+  data-name="POCO C85 6.9 Inch, 6GB RAM, 128GB ROM"
+  data-price="172285"
+  data-old-price="185000"
+  data-discount="-7%"
+  data-image="assets/phonejumia.jpg"
+>
+  Add to Cart
+</button>
+            </div>
+          </article>
+
+          <!-- PRODUCT 7 -->
+          <article class="flash-product">
+            <a href="#" class="flash-product-image">
+              <img
+                src="assets/speaker.jpg"
+                alt="Portable Bluetooth speaker"
+                loading="lazy"
+              />
+              <span class="flash-discount">-20%</span>
+            </a>
+            <div class="flash-stock">15 items in stock</div>
+            <div class="flash-product-info">
+              <h3>
+                <a href="#">Portable Wireless Bluetooth Speaker</a>
+              </h3>
+              <div class="flash-rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.2</span>
+                <span class="rating-count">(712)</span>
+              </div>
+              <p class="flash-current-price">₦14,700</p>
+              <div class="flash-old-price">
+                <del>₦18,500</del>
+              </div>
+              <button
+  type="button"
+  class="add-to-cart"
+  data-id="portable-bluetooth-speaker"
+  data-name="Portable Wireless Bluetooth Speaker"
+  data-price="14700"
+  data-old-price="18500"
+  data-discount="-20%"
+  data-image="assets/speaker.jpg"
+>
+  Add to Cart
+</button>
+            </div>
+          </article>
+        </div>
+
+        <button
+          type="button"
+          class="flash-nav flash-next"
+          aria-label="Scroll products right"
+        >
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- RECOMMENDED PRODUCTS SECTION -->
+    <section class="home-products" id="recommended-products">
+      <div class="home-products__heading">
+        <div>
+          <h2>Recommended for You</h2>
+          <p>Discover great deals on everyday essentials</p>
+        </div>
+        <span class="home-products__count">15 products</span>
+      </div>
+
+      <div class="home-products__grid" id="home-products-grid">
+        <!-- Product cards are rendered by products.js -->
+      </div>
+
+      <div class="home-products__footer">
+        <p id="products-cart-status" aria-live="polite">
+          Ready to discover your next favourite item?
+        </p>
+        <button
+          type="button"
+          class="home-products__load-more"
+          id="products-load-more"
+        >
+          Explore Products
+        </button>
+      </div>
+
+      <div
+        class="home-products__toast"
+        id="products-toast"
+        role="status"
+        aria-live="polite"
+        hidden
+      ></div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="./supabase.js"></script>
+    <script src="cart.js"></script>
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+  </body>
+</html>

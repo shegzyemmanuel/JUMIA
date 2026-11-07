@@ -1,0 +1,408 @@
+/* CART PAGE */
+
+
+.cart-page {
+  width: 92%;
+  max-width: 1180px;
+  margin: 16px auto 40px;
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(250px, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.cart-items-panel,
+.cart-summary,
+.recently-viewed {
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.cart-items-panel {
+  padding: 16px;
+  min-width: 0;
+}
+
+.cart-items-panel h1 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 18px;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr) auto;
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid #eeeeee;
+}
+
+.cart-item-image {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+}
+
+.cart-item-details h3 {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0 0 5px;
+}
+
+.cart-stock {
+  color: #555555;
+  font-size: 12px;
+  margin: 0 0 5px;
+}
+
+.cart-item-price {
+  font-size: 19px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.cart-old-price {
+  display: block;
+  color: #888888;
+  font-size: 13px;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.cart-item-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 2px;
+}
+
+.cart-remove {
+  border: 0;
+  background: transparent;
+  color: #f68b1e;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 6px 0;
+}
+
+.cart-quantity {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.cart-quantity button {
+  border: 0;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  color: #ffffff;
+  background: #f68b1e;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.cart-quantity button:disabled {
+  background: #aaaaaa;
+  cursor: not-allowed;
+}
+
+.cart-summary {
+  padding: 12px;
+}
+
+.cart-summary h2 {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 -12px 12px;
+  padding: 0 12px 12px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.cart-subtotal-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.cart-subtotal-row strong {
+  font-size: 19px;
+  white-space: nowrap;
+}
+
+.cart-checkout {
+  width: 100%;
+  border: 0;
+  border-radius: 4px;
+  background: #f68b1e;
+  color: #ffffff;
+  padding: 13px 8px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+}
+
+.cart-checkout:hover {
+  background: #e97c10;
+}
+
+.recently-viewed {
+  grid-column: 1 / -1;
+  padding: 16px;
+}
+
+.recently-viewed-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.recently-viewed-heading h2 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.recently-viewed-heading a {
+  color: #f68b1e;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  .cart-page {
+    width: 94%;
+    grid-template-columns: 1fr;
+  }
+
+  .cart-summary,
+  .recently-viewed {
+    grid-column: 1;
+  }
+
+  .cart-item {
+    grid-template-columns: 64px minmax(0, 1fr);
+  }
+
+  .cart-item-image {
+    width: 64px;
+    height: 64px;
+  }
+
+  .cart-item-price {
+    grid-column: 2;
+  }
+}
+
+
+
+
+
+/* =========================================
+   CART PAGE — RESPONSIVE IMPROVEMENTS
+   ========================================= */
+
+/* Tablets */
+@media (max-width: 900px) {
+  .cart-page {
+    width: 94%;
+    gap: 12px;
+  }
+
+  .cart-items-panel {
+    padding: 14px;
+  }
+
+  .cart-summary {
+    padding: 12px;
+  }
+
+  .cart-item {
+    gap: 10px;
+  }
+
+  .cart-item-price {
+    font-size: 17px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 700px) {
+  .cart-page {
+    width: 94%;
+    margin: 12px auto 28px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .cart-items-panel,
+  .cart-summary,
+  .recently-viewed {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .cart-items-panel {
+    padding: 13px;
+  }
+
+  .cart-items-panel h1 {
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+
+  .cart-item {
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 9px;
+    padding: 13px 0;
+  }
+
+  .cart-item-image {
+    width: 64px;
+    height: 64px;
+  }
+
+  .cart-item-details {
+    min-width: 0;
+  }
+
+  .cart-item-details h3 {
+    font-size: 13px;
+    overflow-wrap: anywhere;
+  }
+
+  .cart-item-price {
+    grid-column: 2;
+    font-size: 16px;
+    white-space: normal;
+  }
+
+  .cart-old-price {
+    font-size: 12px;
+  }
+
+  .cart-item-actions {
+    grid-column: 1 / -1;
+    gap: 10px;
+    margin-top: 5px;
+  }
+
+  .cart-remove {
+    font-size: 13px;
+  }
+
+  .cart-quantity {
+    gap: 10px;
+  }
+
+  .cart-quantity button {
+    width: 34px;
+    height: 34px;
+  }
+
+  .cart-summary {
+    padding: 14px;
+  }
+
+  .cart-summary h2 {
+    font-size: 14px;
+  }
+
+  .cart-subtotal-row {
+    align-items: center;
+    font-size: 13px;
+  }
+
+  .cart-subtotal-row strong {
+    font-size: 17px;
+  }
+
+  .cart-checkout {
+    min-height: 45px;
+    font-size: 14px;
+  }
+
+  .recently-viewed {
+    padding: 13px;
+  }
+
+  .recently-viewed-heading h2 {
+    font-size: 17px;
+  }
+
+  .recently-viewed-heading a {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .recently-viewed-products {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+    margin-top: 12px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 380px) {
+  .cart-page {
+    width: 96%;
+    gap: 9px;
+  }
+
+  .cart-items-panel {
+    padding: 10px;
+  }
+
+  .cart-item {
+    grid-template-columns: 55px minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .cart-item-image {
+    width: 55px;
+    height: 55px;
+  }
+
+  .cart-item-details h3 {
+    font-size: 12px;
+  }
+
+  .cart-item-price {
+    font-size: 15px;
+  }
+
+  .cart-item-actions {
+    flex-wrap: wrap;
+  }
+
+  .cart-quantity {
+    gap: 8px;
+  }
+
+  .cart-quantity button {
+    width: 31px;
+    height: 31px;
+    font-size: 18px;
+  }
+
+  .cart-summary {
+    padding: 11px;
+  }
+
+  .cart-subtotal-row strong {
+    font-size: 16px;
+  }
+
+  .recently-viewed-heading h2 {
+    font-size: 15px;
+  }
+}
