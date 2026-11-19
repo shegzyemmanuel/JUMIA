@@ -253,7 +253,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 document.addEventListener("DOMContentLoaded", async () => {
 
-  // Registration and login pages don't have this component.
+  // Find these elements within this handler's own scope.
+  const accountButton = document.querySelector(".account-button");
+  const accountDropdown = document.querySelector(".account-dropdown");
+
+  // Login/register pages do not contain the account menu.
   if (!accountButton || !accountDropdown) return;
 
   if (typeof supabaseClient === "undefined") {
