@@ -155,14 +155,24 @@ document.addEventListener("DOMContentLoaded", () => {
           "Sign-in could not be completed. Please try again.";
       }
     } catch (error) {
+      // Keep the full error in the browser console for debugging.
+      console.error("Sign-in error:", error);
+
       message.style.color = "#d32f2f";
 
       if (error.message?.toLowerCase().includes("email not confirmed")) {
         message.textContent =
           "Please confirm your email address before signing in.";
       } else {
+        const errorDetails = [
+          error.message,
+          error.code ? `Code: ${error.code}` : "",
+          error.status ? `Status: ${error.status}` : "",
+        ].filter(Boolean);
+
         message.textContent =
-          "Sign-in failed. Check your email and password and try again.";
+          errorDetails.join(" — ") ||
+          "An unexpected sign-in error occurred. Please try again.";
       }
     } finally {
       submitButton.disabled = false;
